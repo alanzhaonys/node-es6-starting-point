@@ -12,8 +12,13 @@ To test
 To generate test coverage report
 - Run `yarn cover`
 
+To generate JSDOC
+- RUN `yarn doc`
+
 To build
 - Run `yarn build`
 
 To run
 - Run `yarn start`
+
+Documentations: [doc/index.html](doc/index.html)

@@ -6,6 +6,7 @@
     "lint": "./node_modules/.bin/eslint lib/* && ./node_modules/.bin/eslint test/*",
     "test": "./node_modules/.bin/mocha --reporter spec --require babel-core/register test/*",
     "cover": "./node_modules/.bin/nyc --extension .js --reporter=lcov --reporter=text ./node_modules/.bin/mocha --require babel-core/register ./test/*",
+    "doc": "./node_modules/.bin/jsdoc lib/* -d doc",
     "build": "rimraf dist/ && ./node_modules/.bin/eslint lib/* && babel ./ --out-dir dist/ --ignore ./node_modules,./.babelrc,./package.json,./yarn.lock --copy-files",
     "start": "yarn run build && node dist/index.js"
   },
@@ -17,6 +18,7 @@
     "chai": "^4.2.0",
     "coveralls": "^3.0.5",
     "eslint": "^6.0.1",
+    "jsdoc": "^3.6.3",
     "mocha": "^6.2.0",
     "nyc": "^14.1.1",
     "rimraf": "^2.6.3"
