@@ -1,3 +1,5 @@
+# node-es6-starting-point [![Build Status][travis-image]][travis-url] [![Coveralls Status][coveralls-image]][coveralls-url]
+
 Prerequisites
 - Run `yarn install`
 
