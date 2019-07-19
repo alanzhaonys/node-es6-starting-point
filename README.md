@@ -1,4 +1,4 @@
-# node-es6-starting-point [![Build Status][travis-image]][travis-url] [![Coveralls Status][coveralls-image]][coveralls-url]
+# node-es6-starting-point [![Build Status](https://travis-ci.org/alanzhaonys/node-es6-starting-point.svg?branch=master)](https://travis-ci.org/alanzhaonys/node-es6-starting-point)
 
 Prerequisites
 - Run `yarn install`
