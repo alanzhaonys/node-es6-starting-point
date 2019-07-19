@@ -7,5 +7,6 @@ describe('MyClass', function() {
     let myClass = new MyClass();
     expect(myClass.returnString()).to.be.a('string');
     expect(myClass.returnNumber()).to.be.a('number');
+    expect(myClass.doSomething()).to.be.a('undefined');
   });
 });
