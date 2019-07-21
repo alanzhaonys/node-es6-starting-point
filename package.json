@@ -3,12 +3,12 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "lint": "./node_modules/.bin/eslint ./lib/* && ./node_modules/.bin/eslint ./test/*",
-    "test": "./node_modules/.bin/mocha --reporter spec --require babel-core/register ./test/*",
-    "cover": "./node_modules/.bin/nyc --extension .js --reporter=lcov --reporter=text ./node_modules/.bin/mocha --require babel-core/register ./test/*",
-    "doc": "./node_modules/.bin/jsdoc ./lib/* -d ./doc",
-    "build": "rimraf ./dist && ./node_modules/.bin/eslint ./lib/* && babel ./ --out-dir ./dist --ignore ./node_modules,./.babelrc,./package.json,./yarn.lock,./test,./doc,./coverage,./README.md,./TODO.md --copy-files",
-    "clify": "./node_modules/.bin/cp-cli ./dist/index.js ./dist/cli.js && ./node_modules/.bin/append-top ./dist/cli.js '#!/usr/bin/env node' && ./node_modules/.bin/make-exec ./dist/cli.js",
+    "lint": "eslint ./lib/* && eslint ./test/*",
+    "test": "mocha --reporter spec --require babel-core/register ./test/*",
+    "cover": "nyc --extension .js --reporter=lcov --reporter=text mocha --require babel-core/register ./test/*",
+    "doc": "jsdoc ./lib/* -d ./doc",
+    "build": "rimraf ./dist && eslint ./lib/* && babel ./ --out-dir ./dist --ignore ./node_modules,./.babelrc,./package.json,./yarn.lock,./test,./doc,./coverage,./README.md,./TODO.md --copy-files",
+    "clify": "cp-cli ./dist/index.js ./dist/cli.js && append-top ./dist/cli.js '#!/usr/bin/env node' && make-exec ./dist/cli.js",
     "start": "yarn run build && node ./dist/index.js"
   },
   "bin": {

@@ -18,6 +18,9 @@ To generate JSDOC
 To build
 - Run `yarn build`
 
+To generate CLI script
+- Run `yarn clify`
+
 To run
 - Run `yarn start`
 
