@@ -9,10 +9,11 @@
     "doc": "jsdoc ./lib/* -d ./doc",
     "build": "rimraf ./dist && eslint ./lib/* && babel ./ --out-dir ./dist --ignore ./node_modules,./.babelrc,./package.json,./yarn.lock,./test,./doc,./coverage,./README.md,./TODO.md --copy-files",
     "clify": "cp-cli ./dist/index.js ./dist/cli.js && append-top ./dist/cli.js '#!/usr/bin/env node' && make-exec ./dist/cli.js",
-    "start": "yarn run build && node ./dist/index.js"
+    "start": "yarn run build && node ./dist/index.js",
+    "package": "yarn build && pkg ."
   },
   "bin": {
-    "node-es6-starting-point": "./dist/cli.js"
+    "node-es6-starting-point": "./dist/index.js"
   },
   "author": "Alan Zhao",
   "license": "MIT",
@@ -28,6 +29,7 @@
     "make-exec": "^1.0.0",
     "mocha": "^6.2.0",
     "nyc": "^14.1.1",
+    "pkg": "^4.4.0",
     "rimraf": "^2.6.3"
   }
 }
