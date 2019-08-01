@@ -1,6 +1,6 @@
 {
   "name": "node-es6-starting-point",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "main": "lib/index.js",
   "scripts": {
     "lint": "eslint ./lib/* && eslint ./test/*",
@@ -10,10 +10,10 @@
     "build": "rimraf ./dist && eslint ./lib/* && babel ./lib --out-dir ./dist --copy-files",
     "clify": "cp-cli ./dist/index.js ./dist/cli.js && append-top ./dist/cli.js '#!/usr/bin/env node' && make-exec ./dist/cli.js",
     "start": "yarn build && node ./dist/index.js",
-    "package": "yarn build && pkg ."
+    "package": "yarn build && yarn clify && pkg ."
   },
   "bin": {
-    "node-es6-starting-point": "./dist/index.js"
+    "node-es6-starting-point": "./dist/cli.js"
   },
   "author": "Alan Zhao",
   "license": "MIT",
