@@ -1,6 +1,6 @@
 {
   "name": "node-es6-starting-point",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "main": "lib/index.js",
   "scripts": {
     "lint": "eslint ./lib/* && eslint ./test/*",
