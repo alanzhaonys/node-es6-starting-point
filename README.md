@@ -18,8 +18,11 @@ To generate JSDOC
 To build
 - Run `yarn build`
 
-To generate CLI script
+To generate CLI script (that required NODE enviornment)
 - Run `yarn clify`
+
+To gererate a standalone executeable that DOESN'T require NODE environment
+- Run `yarn package`
 
 To run
 - Run `yarn start`
