@@ -1,15 +1,15 @@
 {
   "name": "node-es6-starting-point",
   "version": "1.0.1",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
     "lint": "eslint ./lib/* && eslint ./test/*",
     "test": "mocha --reporter spec --require babel-core/register ./test/*",
     "cover": "nyc --extension .js --reporter=lcov --reporter=text mocha --require babel-core/register ./test/*",
     "doc": "jsdoc ./lib/* -d ./doc",
-    "build": "rimraf ./dist && eslint ./lib/* && babel ./ --out-dir ./dist --ignore ./node_modules,./.babelrc,./package.json,./yarn.lock,./test,./doc,./coverage,./README.md,./TODO.md --copy-files",
+    "build": "rimraf ./dist && eslint ./lib/* && babel ./lib --out-dir ./dist --copy-files",
     "clify": "cp-cli ./dist/index.js ./dist/cli.js && append-top ./dist/cli.js '#!/usr/bin/env node' && make-exec ./dist/cli.js",
-    "start": "yarn run build && node ./dist/index.js",
+    "start": "yarn build && node ./dist/index.js",
     "package": "yarn build && pkg ."
   },
   "bin": {
