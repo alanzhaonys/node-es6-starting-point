@@ -21,7 +21,7 @@ To build
 To generate CLI script (that required NODE enviornment)
 - Run `yarn clify`
 
-To gererate a standalone executeable that DOESN'T require NODE environment
+To gererate a standalone executeable/binary that DOESN'T require NODE environment
 - Run `yarn package`
 
 To run
