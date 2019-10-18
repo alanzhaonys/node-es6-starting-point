@@ -28,3 +28,17 @@ To run
 - Run `yarn start`
 
 Documentations: [doc/index.html](doc/index.html)
+
+
+# Convert Model from Keras to Tensorflowjs Format
+
+Run `pip3 install tensorflowjs`
+
+Run Python3 code below
+```
+from tensorflow import keras
+from tensorflow.keras import backend
+import tensorflowjs as tfjs
+mobileNet = keras.applications.mobilenet.MobileNet()
+tfjs.converters.save_keras_model(mobileNet, './models/mobilenet')
+```

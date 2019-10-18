@@ -27,5 +27,8 @@
     "nyc": "^14.1.1",
     "pkg": "^4.4.0",
     "rimraf": "^3.0.0"
+  },
+  "dependencies": {
+    "@tensorflow/tfjs-node": "^1.2.11"
   }
 }
